@@ -27,7 +27,6 @@ class MyApp: #Widgets
         self.Clear = Button(frame, text="Clear", font=("Segoe UI", 10), relief='flat', command=self.clear)
         self.Submit = Button(frame, text="Submit", font=("Segoe UI", 10), relief='flat',command=self.submit)
         self.List = ttk.Combobox(frame, values=["Computer Science", "Information Technology", "Computer Engineering"], font=("Segoe UI", 10))
-        self.final_result = Label(frame, text="")
 
         self.Personal_Title.place(x=12, y=24)
         self.First_name.place(x=72, y=135)
