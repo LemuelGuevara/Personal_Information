@@ -11,6 +11,7 @@ class MyApp: #Widgets
 
         self.Personal_Title = Label(frame, text="Personal Information", font=("Segoe UI", 16), bg='#939393')
         self.labels = Listbox(frame, width=15, font=("Segoe UI", 14), bg='#939393', bd=0, selectbackground='#939393', highlightthickness=0, relief='flat')
+        self.usr_input= Entry(frame, font=("Segoe UI", 10), textvariable="")
 
         for item in ['First Name', 'Last Name', 'Courses', 'Birthday', 'Skills']:
             self.labels.insert(END, item)
@@ -34,11 +35,9 @@ class MyApp: #Widgets
             self.Submit.place(x=315, y=315, width=75, height=23)
         
      def clear(self):
-         self.E1.delete(0, 'end')
-         self.E2.delete(0, 'end')
-         self.E3.delete(0, 'end')
-         self.E4.delete(0, 'end')
-         self.List.set('')
+         for item in [self.E1, self.E2, self.E3, self.E4]:
+            item.delete(0, 'end')
+            self.List.set('')
 
      def submit(self):
         if self.E1.get() == "":
