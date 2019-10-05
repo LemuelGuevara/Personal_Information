@@ -52,28 +52,28 @@ class MyApp: #Widgets
         elif self.E4.get() == "":
             messagebox.showinfo("Personal Info", "Please fill up the form.")
         else:
-         messagebox.showinfo("Personal Info", "Your information hase been submitted\n Click OK to proceed.")         
-         top = Toplevel(width=451, height=354, bg='#939393')
-         self.Personal_information = Label(top, text="Personal Information", font=("Segoe UI", 14), bg='#939393')
-         self.Personal_information.place(x=12, y=9)
-         self.lb1 = Listbox(top, font=("Segoe UI", 14, BOLD), bg='#939393', bd=0, selectbackground='#939393', highlightthickness=0, relief='flat')
-         self.lb2 = Listbox(top, font=("Segoe UI", 14), bg='#939393', bd=0, selectbackground='#939393', highlightthickness=0, relief='flat')
+            messagebox.showinfo("Personal Info", "Your information hase been submitted\n Click OK to proceed.")         
+            top = Toplevel(width=451, height=354, bg='#939393')
+            self.Personal_information = Label(top, text="Personal Information", font=("Segoe UI", 14), bg='#939393')
+            self.Personal_information.place(x=12, y=9)
+            self.lb1 = Listbox(top, font=("Segoe UI", 14, BOLD), bg='#939393', bd=0, selectbackground='#939393', highlightthickness=0, relief='flat')
+            self.lb2 = Listbox(top, font=("Segoe UI", 14), bg='#939393', bd=0, selectbackground='#939393', highlightthickness=0, relief='flat')
          
-         fN = str(self.E1.get() + " " +  self.E2.get())
-         cRS = str(self.List.get())
-         bTD = str(self.E3.get())
-         sKS = str(self.E4.get())
+            fN = str(self.E1.get() + " " +  self.E2.get())
+            cRS = str(self.List.get())
+            bTD = str(self.E3.get())
+            sKS = str(self.E4.get())
 
-         for item in ["Name:", "Course:", "Birthday:", "Skills:"]:
+        for item in ["Name:", "Course:", "Birthday:", "Skills:"]:
             self.lb1.insert(END, item)
             self.lb1.place(x=12, y=78)
 
-         for result in [fN, cRS, bTD, sKS]:
+        for result in [fN, cRS, bTD, sKS]:
             self.lb2.insert(END, result)
             self.lb2.place(x=103, y=78, width=205)
 
-         top.title("Personal Info")
-         top.mainloop()
+            top.title("Personal Info")
+            top.mainloop()
       
 root = Tk()
 root.title("Registration Form")
