@@ -4,19 +4,14 @@ from tkinter import messagebox
 from tkinter.font import BOLD
 
 class MyApp: #Widgets
-
      def __init__(self, master):
-        frame = Frame(root, width=470, height=480, bg='#939393')
-        frame.pack()
-
+        frame = Frame(root, width=470, height=480, bg='#939393').pack()
         self.Personal_Title = Label(frame, text="Personal Information", font=("Segoe UI", 16), bg='#939393')
         self.labels = Listbox(frame, width=15, font=("Segoe UI", 14), bg='#939393', bd=0, selectbackground='#939393', highlightthickness=0, relief='flat')
-        self.usr_input= Entry(frame, font=("Segoe UI", 10), textvariable="")
 
         for item in ['First Name', 'Last Name', 'Courses', 'Birthday', 'Skills']:
             self.labels.insert(END, item)
             self.labels.place(x=70, y=136)
-
             self.E1 = Entry(frame, font=("Segoe UI", 10), textvariable="")
             self.E2 = Entry(frame, font=("Segoe UI", 10), textvariable="")
             self.E3 = Entry(frame, font=("Segoe UI", 10), textvariable="")
