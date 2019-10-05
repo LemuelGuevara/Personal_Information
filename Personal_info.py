@@ -4,7 +4,6 @@ from tkinter import messagebox
 from tkinter.font import BOLD
 
 class MyApp: #Widgets
-
      def __init__(self, master):
         frame = Frame(root, width=470, height=480, bg='#939393')
         frame.pack()
