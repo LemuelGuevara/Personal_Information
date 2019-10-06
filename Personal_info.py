@@ -58,7 +58,7 @@ class MyApp: #Widgets
             self.lb1.insert(END, item)
             self.lb1.place(x=12, y=78)
 
-         for result in [str(self.E1.get() + " " +  self.E2.get()), str(self.List.get()), str(self.E3.get()), str(self.E4.get())]:
+         for result in [str(self.E1.get() + " " + self.E2.get()), str(self.List.get()), str(self.E3.get()), str(self.E4.get())]:
             self.lb2.insert(END, result)
             self.lb2.place(x=103, y=78, width=205)
 
