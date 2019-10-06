@@ -8,7 +8,7 @@ class MyApp: #Widgets
         frame = Frame(root, width=470, height=480, bg='#939393')
         frame.pack()
         self.Personal_Title = Label(frame, text="Personal Information", font=("Segoe UI", 16), bg='#939393')
-        self.labels = Listbox(frame, width=15, font=("Segoe UI", 14), bg='#939393', bd=0, selectbackground='#939393', highlightthickness=0, relief='flat')
+        self.labels = Listbox(frame, width=15, font=("Segoe UI", 14), bg='#939393', bd=0, selectbackground='#939393', highlightthickness=0, highlightcolor='#939393', relief='flat')
 
         for item in ['First Name', 'Last Name', 'Courses', 'Birthday', 'Skills']:
             self.labels.insert(END, item)
@@ -54,16 +54,11 @@ class MyApp: #Widgets
          self.lb1 = Listbox(top, font=("Segoe UI", 14, BOLD), bg='#939393', bd=0, selectbackground='#939393', highlightthickness=0, relief='flat')
          self.lb2 = Listbox(top, font=("Segoe UI", 14), bg='#939393', bd=0, selectbackground='#939393', highlightthickness=0, relief='flat')
          
-         fN = str(self.E1.get() + " " +  self.E2.get())
-         cRS = str(self.List.get())
-         bTD = str(self.E3.get())
-         sKS = str(self.E4.get())
-
          for item in ["Name:", "Course:", "Birthday:", "Skills:"]:
             self.lb1.insert(END, item)
             self.lb1.place(x=12, y=78)
 
-         for result in [fN, cRS, bTD, sKS]:
+         for result in [str(self.E1.get() + " " +  self.E2.get()), str(self.List.get()), str(self.E3.get()), str(self.E4.get())]:
             self.lb2.insert(END, result)
             self.lb2.place(x=103, y=78, width=205)
 
